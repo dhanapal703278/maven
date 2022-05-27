@@ -1,6 +1,6 @@
 FROM tomcat
 RUN rm -rf /usr/local/tomcat/webapps/ROOT/
-COPY webapp.war /usr/local/tomcat/webapps/ROOT/ 
+COPY target/webapp.war /usr/local/tomcat/webapps/ROOT/ 
 RUN cd /usr/local/tomcat/webapps/ROOT && unzip java-tomcat-maven-example.war && \
     rm -rf /usr/local/tomcat/webapps/ROOT/java-tomcat-maven-example.war
 EXPOSE 8080
